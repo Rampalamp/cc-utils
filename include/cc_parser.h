@@ -5,4 +5,6 @@
 
 bool ccp_parse_int(const char *input, int *parsed_result);
 
+bool ccp_parse_int_range(const char *input, int min_val, int max_valu, int *parsed_result);
+
 #endif
