@@ -30,7 +30,7 @@ bool ccp_parse_int(const char *input, int *parsed_value)
 
 bool ccp_parse_int_range(const char *input, int min_val, int max_val, int *parsed_value)
 {
-    if (input == NULL || *input == '\0' || parsed_value == NULL) {
+    if (input == NULL || *input == '\0') {
         return false;
     }
     char *end;
@@ -43,6 +43,7 @@ bool ccp_parse_int_range(const char *input, int min_val, int max_val, int *parse
 
     if (value < min_val || value > max_val)
         return false;
+
     if (parsed_value != NULL)
         *parsed_value = (int)value;
 
